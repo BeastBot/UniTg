@@ -13,7 +13,7 @@ async def _(event):
            input_str = event.pattern_match.group(1)
            if input_str == "alive":
                  await event.reply(""
-                     "My bot is running \n\n"
+                     "Me Iz Running \n\n"
                      "XD"
                      "")
                 
