@@ -10,7 +10,7 @@ import io
 
 
 DEFAULTUSER = Config.ALIVE_NAME
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True, allow_sudo=True))
 
 async def _(event):
 
