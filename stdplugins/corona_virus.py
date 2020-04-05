@@ -4,7 +4,7 @@ from covid import Covid
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="coronavirus (.*)" allow_sudo=True))
+@borg.on(admin_cmd(pattern="coronavirus (.*)", allow_sudo=True))
 async def _(event):
     covid = Covid()
     data = covid.get_data()
