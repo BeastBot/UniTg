@@ -15,7 +15,7 @@ from hachoir.parser import createParser
 from sample_config import Config
 
 
-@borg.on(admin_cmd(pattern="watermark"))
+@borg.on(admin_cmd(pattern="watermark", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
