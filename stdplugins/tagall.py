@@ -5,7 +5,7 @@ from telethon import events
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("tagall"))
+@borg.on(admin_cmd(pattern="tagall", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
