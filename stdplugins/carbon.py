@@ -16,7 +16,7 @@ from time import sleep
 import asyncio
 import os
 
-@borg.on(events.NewMessage(pattern=r"\.carbon", outgoing=True, allow_sudo=True))
+@borg.on(events.NewMessage(pattern=r"\.carbon", outgoing=True))
 async def carbon_api(e):
  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
    """ A Wrapper for carbon.now.sh """
